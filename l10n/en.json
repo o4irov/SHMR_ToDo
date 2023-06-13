@@ -1,0 +1,12 @@
+{
+    "tasks": "My tasks",
+    "done": "Doned",
+    "new": "New",
+    "importence": "Importence",
+    "doneTill": "To do by",
+    "delete": "Delete",
+    "save": "Save",
+    "none": "None",
+    "low": "Low",
+    "high": "High"
+}
