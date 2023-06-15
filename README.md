@@ -20,8 +20,8 @@ _Добавить задачу_
 
 ## Библиотеки
 
--[intl: ^0.17.0](https://pub.dev/packages/intl)
--[logger: ^1.4.0](https://pub.dev/packages/logger)
+- [intl: ^0.17.0](https://pub.dev/packages/intl)
+- [logger: ^1.4.0](https://pub.dev/packages/logger)
 
 ## Авторы
 
