@@ -3,11 +3,7 @@
 
 ## Скриншоты
 
-![Main screen](git/first.png)
-_Основной экран_
-
-![Add task](git/second.png)
-_Добавить задачу_
+![Main screen](git/first.png) ![Add task](git/second.png)
 
 ## Features
 -
