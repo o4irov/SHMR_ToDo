@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:shmr_todo/constants/constants.dart';
-import 'package:shmr_todo/presentation/home_screen.dart';
-import 'package:shmr_todo/utils/localizations.dart';
+import 'package:to_do/constants/constants.dart';
+import 'package:to_do/presentation/home_screen.dart';
+import 'package:to_do/utils/localizations.dart';
 
 void main() {
   runApp(const MainApp());

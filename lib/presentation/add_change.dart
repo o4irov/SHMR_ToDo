@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:shmr_todo/constants/constants.dart';
-import 'package:shmr_todo/utils/localizations.dart';
+import 'package:logger/logger.dart';
+import 'package:to_do/constants/constants.dart';
+import 'package:to_do/utils/localizations.dart';
 import '../models/global.dart';
 import '../models/task.dart';
 
@@ -19,6 +20,10 @@ class _AddTaskState extends State<AddTask> {
   String _importance = '';
   late bool _deadlineExist;
   late DateTime _selectedDate;
+
+  var logger = Logger(
+    printer: PrettyPrinter(),
+  );
 
   @override
   void initState() {
@@ -155,6 +160,7 @@ class _AddTaskState extends State<AddTask> {
                   deadline: _deadlineExist ? _selectedDate : null,
                   status: widget.task?.status ?? 'in doing',
                 );
+                logger.d('Saved task: ${task.title}');
                 Navigator.pop(context, task);
               },
               child: Text(
@@ -253,10 +259,7 @@ class _AddTaskState extends State<AddTask> {
           },
           onSelected: (value) => _changeSelected(value),
           icon: Text(
-            (imp == null
-                    ? AppLocalizations.of(context)?.translate('none')
-                    : AppLocalizations.of(context)?.translate(_importance)) ??
-                '',
+            (AppLocalizations.of(context)?.translate(_importance)) ?? '',
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   color: _importance == 'high'
                       ? AppConstants.red(context)

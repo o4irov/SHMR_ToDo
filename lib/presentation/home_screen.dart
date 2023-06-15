@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:shmr_todo/constants/constants.dart';
-import 'package:shmr_todo/presentation/add_change.dart';
-import 'package:shmr_todo/presentation/todo_list.dart';
-import 'package:shmr_todo/utils/localizations.dart';
+import 'package:to_do/constants/constants.dart';
+import 'package:to_do/presentation/add_change.dart';
+import 'package:to_do/presentation/todo_list.dart';
+import 'package:to_do/utils/localizations.dart';
 
 class ToDo extends StatefulWidget {
   const ToDo({super.key});

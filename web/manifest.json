@@ -1,6 +1,6 @@
 {
-    "name": "shmr_todo",
-    "short_name": "shmr_todo",
+    "name": "to_do",
+    "short_name": "to_do",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

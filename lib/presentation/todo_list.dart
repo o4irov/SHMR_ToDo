@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shmr_todo/constants/constants.dart';
-import 'package:shmr_todo/models/task.dart';
-import 'package:shmr_todo/presentation/task.dart';
-import 'package:shmr_todo/utils/localizations.dart';
+import 'package:logger/logger.dart';
+import 'package:to_do/constants/constants.dart';
+import 'package:to_do/models/task.dart';
+import 'package:to_do/presentation/task.dart';
+import 'package:to_do/utils/localizations.dart';
 
 import 'add_change.dart';
 
@@ -32,6 +33,11 @@ class _ToDoListState extends State<ToDoList> {
             'Купить что-то, где-то, зачем-то, но зачем не очень понятно, но точно чтобы показать как обр…',
         importance: 'low'),
   ];
+
+  var logger = Logger(
+    printer: PrettyPrinter(),
+  );
+
   void _callCountChanged(bool increase) {
     widget.changeCount(increase);
   }
@@ -39,6 +45,7 @@ class _ToDoListState extends State<ToDoList> {
   void deleteTask(int id) {
     setState(() {
       tasks.removeWhere((element) => element.id == id);
+      logger.d('Id deleted task: $id');
     });
   }
 
