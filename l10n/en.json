@@ -2,11 +2,15 @@
     "tasks": "My tasks",
     "done": "Doned",
     "new": "New",
-    "importence": "Importence",
+    "importance": "Importence",
     "doneTill": "To do by",
     "delete": "Delete",
-    "save": "Save",
+    "save": "SAVE",
     "none": "None",
     "low": "Low",
-    "high": "High"
+    "high": "High",
+    "obscure": "Write a task",
+    "confirm": "Are you serious want to delete changes?",
+    "yes": "YES",
+    "no": "NO"
 }
