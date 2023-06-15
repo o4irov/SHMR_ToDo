@@ -17,7 +17,7 @@ class AddTask extends StatefulWidget {
 
 class _AddTaskState extends State<AddTask> {
   final TextEditingController _titleController = TextEditingController();
-  String _importance = '';
+  String _importance = 'none';
   late bool _deadlineExist;
   late DateTime _selectedDate;
 
@@ -30,7 +30,7 @@ class _AddTaskState extends State<AddTask> {
     _deadlineExist = widget.task?.deadline != null;
     _selectedDate = widget.task?.deadline ?? DateTime.now();
     _titleController.text = widget.task?.title ?? '';
-    _importance = widget.task?.importance ?? '';
+    _importance = widget.task?.importance ?? 'none';
     super.initState();
   }
 
@@ -183,7 +183,7 @@ class _AddTaskState extends State<AddTask> {
                   children: [
                     title(),
                     const Padding(padding: EdgeInsets.only(top: 10)),
-                    importance(widget.task?.importance),
+                    importance(),
                     const Padding(padding: EdgeInsets.only(top: 10)),
                     Container(
                       width: double.infinity,
@@ -234,7 +234,7 @@ class _AddTaskState extends State<AddTask> {
     );
   }
 
-  Widget importance(String? imp) {
+  Widget importance() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -245,9 +245,7 @@ class _AddTaskState extends State<AddTask> {
               ),
         ),
         PopupMenuButton(
-          initialValue: imp == null
-              ? AppLocalizations.of(context)?.translate('none')
-              : AppLocalizations.of(context)?.translate(imp),
+          initialValue: AppLocalizations.of(context)?.translate(_importance),
           itemBuilder: (context) {
             return [
               item(AppLocalizations.of(context)?.translate('none') ?? '',

@@ -16,7 +16,10 @@ class _ToDoState extends State<ToDo> {
   int count = 0;
   void changeCount(bool? increase) {
     setState(() {
-      if (increase ?? true) {
+      if (increase == null) {
+        return;
+      }
+      if (increase) {
         count++;
         return;
       }

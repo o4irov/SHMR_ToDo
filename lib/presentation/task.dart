@@ -8,7 +8,7 @@ import '../models/task.dart';
 class TaskTile extends StatelessWidget {
   final Task task;
   final Function(int) deleteTask;
-  final Function(Task, bool) onChanged;
+  final Function(Task, bool?) onChanged;
   const TaskTile(
       {super.key,
       required this.task,
@@ -174,7 +174,7 @@ class TaskTile extends StatelessWidget {
                   ),
                 );
                 if (newTask != null) {
-                  onChanged(newTask, false);
+                  onChanged(newTask, null);
                 }
               },
               child: Container(

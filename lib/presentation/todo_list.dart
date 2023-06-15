@@ -9,7 +9,7 @@ import 'add_change.dart';
 
 class ToDoList extends StatefulWidget {
   final bool isVisible;
-  final Function(bool) changeCount;
+  final Function(bool?) changeCount;
   const ToDoList(
       {super.key, required this.isVisible, required this.changeCount});
 
@@ -38,7 +38,7 @@ class _ToDoListState extends State<ToDoList> {
     printer: PrettyPrinter(),
   );
 
-  void _callCountChanged(bool increase) {
+  void _callCountChanged(bool? increase) {
     widget.changeCount(increase);
   }
 
@@ -49,7 +49,7 @@ class _ToDoListState extends State<ToDoList> {
     });
   }
 
-  void onChanged(Task task, bool value) {
+  void onChanged(Task task, bool? value) {
     _callCountChanged(value);
     setState(() {
       try {
@@ -80,7 +80,7 @@ class _ToDoListState extends State<ToDoList> {
                 ),
               );
               if (newTask != null) {
-                onChanged(newTask, false);
+                onChanged(newTask, null);
               }
             },
             child: Container(
