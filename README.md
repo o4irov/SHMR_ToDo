@@ -3,10 +3,10 @@
 
 ## Скриншоты
 
--[Main screen](git/first.png)
+[Main screen](git/first.png)
 _Основной экран_
 
--[Add task](git/seocnd.png)
+[Add task](git/second.png)
 _Добавить задачу_
 
 ## Features
