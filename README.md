@@ -3,10 +3,10 @@
 
 ## Скриншоты
 
-![Main screen](git/first.png)
+-[Main screen](git/first.png)
 _Основной экран_
 
-![Add task](git/seocnd.png)
+-[Add task](git/seocnd.png)
 _Добавить задачу_
 
 ## Features
@@ -20,8 +20,8 @@ _Добавить задачу_
 
 ## Библиотеки
 
--[intl: ^0.17.0](https://pub.dev/packages/intl)
--[logger: ^1.4.0](https://pub.dev/packages/logger)
+![intl: ^0.17.0](https://pub.dev/packages/intl)
+![logger: ^1.4.0](https://pub.dev/packages/logger)
 
 ## Авторы
 
